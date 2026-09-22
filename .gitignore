@@ -1,0 +1,37 @@
+# Allow only this portfolio's public files at the repository root.
+/*
+!/.gitignore
+!/.nojekyll
+!/README.md
+!/index.html
+!/style.css
+!/site.js
+!/assets/
+!/assets/**
+!/east-greenland/
+!/east-greenland/**
+!/glacier/
+!/glacier/**
+!/greenland-climate/
+!/greenland-climate/**
+!/mass-balance/
+!/mass-balance/**
+!/hazards/
+!/hazards/**
+
+.DS_Store
+._*
+Thumbs.db
+.env
+.env.*
+node_modules/
+__pycache__/
+*.pyc
+*.otf
+*.ttf
+*.woff
+*.woff2
+
+# Redistributable Inter variable fonts; OFL.txt is included alongside them.
+!/assets/fonts/inter/Inter-Variable.ttf
+!/assets/fonts/inter/Inter-Italic-Variable.ttf

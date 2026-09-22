@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Reading a short Arctic summer · Jane Wang</title>
+  <meta name="description"
+    content="Sentinel-2 raster screening and quality-selected summer observations in Google Earth Engine.">
+  <meta name="robots" content="noindex">
+
+  <link rel="stylesheet" href="../style.css">
+  <script src="../site.js" defer></script>
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap nav"><a class="brand" href="../index.html">Jane Yuexian Wang<small>Geospatial analysis &amp; visual
+          communication</small></a>
+      <nav aria-label="Main navigation"><a href="../index.html#work">Selected work</a><a
+          href="../index.html#approach">Approach</a><a href="#contact">Contact</a></nav>
+    </div>
+  </header>
+  <main class="wrap" id="main"><a class="breadcrumb" href="../index.html#work">← Selected projects</a>
+    <section class="case-head">
+      <div>
+        <p class="eyebrow">Google Earth Engine / Independent public-data demonstration</p>
+        <h1>Reading a short<br>Arctic summer.</h1>
+      </div>
+      <p class="intro">How much snow- or ice-like surface remains visible as summer progresses? A fixed East Greenland
+        analysis area brings eight summers of Sentinel-2 observations into a consistent, quality-screened view.</p>
+    </section>
+    <dl class="facts">
+      <div>
+        <dt>Data</dt>
+        <dd>Sentinel-2 SR Harmonized + Cloud Score+</dd>
+      </div>
+      <div>
+        <dt>Scope</dt>
+        <dd>July–September · 2018–2025</dd>
+      </div>
+      <div>
+        <dt>Workflow</dt>
+        <dd>Earth Engine raster analysis · Python graphics</dd>
+      </div>
+    </dl>
+    <figure class="plate climate-figure">
+      <div class="plate-art"><img src="../assets/east-greenland/02_seasonal_2024.png" alt="Within one summer"
+          loading="lazy"></div>
+      <figcaption><span class="label">Within one summer</span>
+        <p>In the selected 2024 observations, mapped candidate coverage falls from 12.1% in July to 0.8% in September.
+          The three snapshots do not establish a daily trajectory or melt-out date.</p><button class="figure-open"
+          data-figure="../assets/east-greenland/02_seasonal_2024.svg" data-title="Within one summer">Enlarge figure
+          ↗</button>
+      </figcaption>
+    </figure>
+    <section class="story">
+      <h2>From imagery<br>to a readable signal</h2>
+      <div>
+        <p>This demonstration combines satellite raster processing, explicit quality checks and visual communication.
+          Earth Engine screens and classifies imagery, measures candidate area and ranks observations. Python turns the
+          resulting tables and rendered previews into the graphics shown here.</p>
+        <p>The analysis circle has a 1.5 km radius and includes the glacier terminus as well as the proglacial valley.
+          “Candidate frozen surface” is a spectral screening class: it does not distinguish glacier ice, other ice or
+          newly fallen snow.</p>
+      </div>
+    </section>
+    <figure class="plate climate-figure">
+      <div class="plate-art"><img src="../assets/east-greenland/01_context.png" alt="A fixed analysis area"
+          loading="lazy"></div>
+      <figcaption><span class="label">A fixed analysis area</span>
+        <p>This satellite image shows a glacier and the valley in front of it in East Greenland on 7 July 2024. The gold circle marks the study area, while the dashed white box shows the wider surroundings. Turquoise patches highlight possible snow or ice, covering approximately 12% of the study area that day. These detections show where frozen surfaces may be present, but do not establish what type of ice they are or how they formed.</p>
+        <p>Only the circular analysis area contributes to the statistics. The larger context view locates the glacier
+          edge, sediment, meltwater ponds and bright surface patches.</p><button class="figure-open"
+          data-figure="../assets/east-greenland/01_context.svg" data-title="A fixed analysis area">Enlarge figure
+          ↗</button>
+      </figcaption>
+    </figure>
+    <section class="story">
+      <h2>Processing<br>and quality control</h2>
+      <div>
+        <div class="steps">
+          <div class="step"><span class="index">01 / Screen</span>
+            <h3>Keep usable pixels</h3>
+            <p>Cloud Score+ ≥0.60 and scene-classification exclusions remove cloud, shadow and invalid pixels. Snow/ice
+              remains eligible. Monthly interpretation requires at least 90% usable area.</p>
+          </div>
+          <div class="step"><span class="index">02 / Classify</span>
+            <h3>Apply a fixed rule</h3>
+            <p>On a 20 m UTM grid: NDSI &gt;0.4 and mean visible reflectance &gt;0.2. A water-class veto reduces pond
+              false positives. Retained patches contain at least three connected pixels, nominally 1,200 m².</p>
+          </div>
+          <div class="step"><span class="index">03 / Select</span>
+            <h3>Compare observations</h3>
+            <p>Each month uses one quality-ranked scene. Candidate area is divided by the full analysis area, with no
+              extrapolation over excluded pixels, temporal mosaic or interpolation across gaps.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <figure class="plate climate-figure">
+      <div class="plate-art"><img src="../assets/east-greenland/03_year_month_heatmap.png" alt="Eight summers"
+          loading="lazy"></div>
+      <figcaption><span class="label">Eight summers</span>
+        <p>23 of 24 monthly selections are usable; August 2018 has no eligible imagery. “No · below detection threshold”
+          means no candidate remains after patch filtering, not proof that every original pixel was noncandidate.</p>
+        <button class="figure-open" data-figure="../assets/east-greenland/03_year_month_heatmap.svg"
+          data-title="Eight summers">Enlarge figure ↗</button>
+      </figcaption>
+    </figure>
+    <figure class="plate climate-figure">
+      <div class="plate-art"><img src="../assets/east-greenland/04_september_timeline.png" alt="September observations"
+          loading="lazy"></div>
+      <figcaption><span class="label">September observations</span>
+        <p>Each point represents a separately selected scene. Acquisition timing and possible new snowfall affect the
+          observed coverage; these observations do not establish survival from July or a long-term trend.</p><button
+          class="figure-open" data-figure="../assets/east-greenland/04_september_timeline.svg"
+          data-title="September observations">Enlarge figure ↗</button>
+      </figcaption>
+    </figure>
+    <figure class="plate climate-figure">
+      <div class="plate-art"><img src="../assets/east-greenland/05_september_comparison.png" alt="Spatial contrasts"
+          loading="lazy"></div>
+      <figcaption><span class="label">Spatial contrasts</span>
+        <p>Identical extents and display settings make four Septembers comparable as observed surface states. Broad
+          bright cover in 2021 is consistent with snow-covered terrain; its age is unresolved.</p><button
+          class="figure-open" data-figure="../assets/east-greenland/05_september_comparison.svg"
+          data-title="Spatial contrasts">Enlarge figure ↗</button>
+      </figcaption>
+    </figure>
+    <section class="story">
+      <h2>What the checks<br>establish</h2>
+      <div>
+        <p>The supplied audit reconciles 212 scene records, including 151 valid scenes, with 24 monthly selections and
+          eight valid September observations. Checks cover area balance, classification bins, ranking, missing data and
+          yearly summaries. These are arithmetic and aggregation checks, not a ground-truth accuracy assessment.</p>
+        <p>Scientific raster processing runs in Earth Engine. The local map images are rendered display previews, not
+          georeferenced raster exports, and are never used to calculate the statistics.</p>
+        <p><a class="text-link" href="../assets/east-greenland/METHODS.md">Read the full methods ↗</a></p>
+        <p><a class="text-link" href="../assets/east-greenland/year_month_summary.csv" download>Download monthly
+            observations (CSV) ↓</a></p>
+      </div>
+    </section>
+    <aside class="source-note">
+      <h3>Scope and provenance</h3>
+      <p>Independent demonstration using public Sentinel-2 imagery and Cloud Score+, with a newly constructed analysis
+        area. Contains modified Copernicus Sentinel data (2018–2025), processed in Google Earth Engine.</p>
+      <p>Recurrence is a pattern to examine across observations, not a property established by an individual detection.
+        Candidate coverage describes the selected scene, not the fraction of days with frozen surfaces.</p>
+    </aside><a class="next-project" href="../glacier/index.html"><span class="label">Next
+        project</span><span>Quantifying terrain change with InSAR ↗</span></a>
+  </main>
+  <footer class="wrap" id="contact">
+    <div class="contact">
+      <div>
+        <p class="eyebrow">Jane Yuexian Wang · Vancouver, BC</p>
+        <h2>Let’s make the data legible.</h2>
+        <p>Geospatial analysis, cartography, and editorial visualisation.</p>
+      </div>
+      <div><a href="mailto:janewyx11@gmail.com">janewyx11@gmail.com</a><br><a class="text-link"
+          href="https://www.linkedin.com/in/jane-yuexian-wang-b06ab8143/" target="_blank" rel="noopener">View LinkedIn
+          profile ↗</a></div>
+    </div>
+    <div class="copyright"><span>© 2026 Jane Yuexian Wang</span><span>Selected works / 2026</span></div>
+  </footer>
+  <dialog id="figure-viewer" aria-labelledby="viewer-title">
+    <div class="viewer-bar">
+      <p id="viewer-title">Figure</p><button type="button" id="viewer-close">Close ×</button>
+    </div>
+    <div class="viewer-body"><img id="viewer-image" alt=""></div>
+    <div class="viewer-links"><a id="viewer-original" target="_blank" rel="noopener">Open original SVG ↗</a></div>
+  </dialog>
+</body>
+
+</html>
