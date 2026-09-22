@@ -1,2 +1,157 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quantifying terrain change with InSAR · Jane Wang</title><meta name="description" content="A drafted interferometric workflow exploring terrain change through glacier line-of-sight displacement time series."><meta name="robots" content="noindex"><link rel="stylesheet" href="../style.css"><script src="../site.js" defer></script></head><body><a class="skip" href="#main">Skip to content</a><header class="site-header"><div class="wrap nav"><a class="brand" href="../index.html">Jane Yuexian Wang<small>Geospatial analysis &amp; visual communication</small></a><nav aria-label="Main navigation"><a href="../index.html#work">Selected work</a><a href="../index.html#approach">Approach</a><a href="#contact">Contact</a></nav></div></header><main id="main" class="wrap"><a class="breadcrumb" href="../index.html#work">← Selected projects</a><section class="case-head"><div><p class="eyebrow">Radar remote sensing / Workflow development</p><h1>Quantifying terrain<br>change with InSAR.</h1></div><p class="intro">I drafted an end-to-end workflow to investigate glacier movement through interferometric line-of-sight time series, from Alaska Satellite Facility data acquisition to processing and visual interpretation.</p></section><dl class="facts"><div><dt>My contribution</dt><dd>Workflow drafting and visual interpretation</dd></div><div><dt>Processing direction</dt><dd>Interferograms → Displacement time series → Interpretation</dd></div><div><dt>Finding shown</dt><dd>Ascending observation geometry · 2021–2022</dd></div></dl><section class="story"><h2>The question</h2><div><p>What can a short radar observation record reveal about movement within a glacier outline? The study connects glacier inventories with an interferometric time-series workflow, then examines how the displayed line-of-sight signal varies through the year.</p><p>The workflow is drafted. The retained graphics document the exploration; they do not by themselves establish a fully reproduced and validated processing run.</p></div></section><figure class="plate climate-figure"><div class="plate-art"><img src="../assets/glacier-los-timeseries.svg" alt="Exploratory finding / 2021–2022" loading="lazy"></div><figcaption><span class="label">Exploratory finding / 2021–2022</span><p>The supplied ascending LOS series rises into winter, drops through spring, then partly recovers in summer before declining again toward autumn. This describes the plotted pattern; it does not establish a seasonal mechanism. The figure labels displacement in millimetres but has no readable numerical y-axis ticks, so no displacement magnitude or rate is reported here.</p><button class="figure-open" data-figure="../assets/glacier-los-timeseries.svg" data-title="Exploratory finding / 2021–2022">Enlarge figure ↗</button></figcaption></figure><section class="story"><h2>The drafted<br>workflow</h2><div><div class="steps"><div class="step"><span class="index">01 / Acquire</span><h3>Assemble radar inputs</h3><p>Identify the glacier and observation period, then obtain interferogram products through the Alaska Satellite Facility.</p></div><div class="step"><span class="index">02 / Process</span><h3>Build a time series</h3><p>Prepare the interferogram stack and supporting geometry for MintPy. Its time-series workflow links interferometric observations to displacement along the radar line of sight.</p></div><div class="step"><span class="index">03 / Interpret</span><h3>Survey glacier movement</h3><p>Relate the time series to glacier outlines and inspect temporal variation. Reference choices, coherence, unwrapping and observation geometry remain essential to interpreting that signal.</p></div></div><p class="reference-intro">Workflow context: <a href="https://mintpy.readthedocs.io/en/latest/" target="_blank" rel="noopener">MintPy documentation</a>. These stages describe the drafted approach, not a claim that every processing or correction step has been validated.</p></div></section><figure class="plate climate-figure"><div class="plate-art"><img src="../assets/glacier-insar-preview.svg" alt="Earlier dossier / Context graphic" loading="lazy"></div><figcaption><span class="label">Earlier dossier / Context graphic</span><p>The earlier dossier graphic is retained as the project preview. Its source filename identifies a borrowed time series, and its longer date range differs from the 2021–2022 finding above. It is contextual material, not evidence that the drafted workflow produced this longer record.</p><button class="figure-open" data-figure="../assets/glacier-insar-preview.svg" data-title="Earlier dossier / Context graphic">Enlarge figure ↗</button></figcaption></figure><section class="story"><h2>Data sources<br>and references</h2><div><ol class="references"><li><a href="https://doi.org/10.1016/j.rse.2021.112862" target="_blank" rel="noopener">Bevington, A. R. &amp; Menounos, B. (2022). Accelerated change in the glaciated environments of western Canada revealed through trend analysis of optical satellite imagery.</a><p>Remote Sensing of Environment, 270, 112862. Optical glacier-change context; distinct from the radar LOS measurements shown here.</p><a href="https://zenodo.org/records/5900363" target="_blank" rel="noopener">Associated glacier-outline dataset ↗</a></li><li><a href="https://www.glims.org/rgi_user_guide/welcome.html" target="_blank" rel="noopener">Randolph Glacier Inventory (RGI)</a><p>Global glacier-outline data for inventory context. The version used in this exploration is not recorded in the retained graphics.</p></li><li><a href="https://asf.alaska.edu/" target="_blank" rel="noopener">Alaska Satellite Facility</a><p>Radar-data and interferogram acquisition within the drafted workflow.</p></li><li><a href="https://mintpy.readthedocs.io/en/latest/" target="_blank" rel="noopener">MintPy · InSAR time-series analysis</a><p>Software for deriving line-of-sight displacement time series from interferogram stacks.</p></li></ol></div></section><aside class="source-note"><h3>Reading the result</h3><p>Ascending LOS displacement is a projection along the satellite’s viewing direction, not the full glacier-flow vector. The shaded band and companion traces are retained as supplied; their statistical definitions are not documented in the graphic. They are not labelled as a confidence interval here.</p></aside><a class="next-project" href="../greenland-climate/index.html"><span class="label">Next project</span><span>Greenland climate ↗</span></a></main><footer class="wrap" id="contact"><div class="contact"><div><p class="eyebrow">Jane Yuexian Wang · Vancouver, BC</p><h2>Let’s make the data legible.</h2><p>Geospatial analysis, cartography, and editorial visualisation.</p></div><div><a href="mailto:janewyx11@gmail.com">janewyx11@gmail.com</a><br><a class="text-link" href="https://www.linkedin.com/in/jane-yuexian-wang-b06ab8143/" target="_blank" rel="noopener">View LinkedIn profile ↗</a></div></div><div class="copyright"><span>© 2026 Jane Yuexian Wang</span><span>Selected works / 2026</span></div></footer><dialog id="figure-viewer" aria-labelledby="viewer-title"><div class="viewer-bar"><p id="viewer-title">Figure</p><button type="button" id="viewer-close">Close ×</button></div><div class="viewer-body"><img id="viewer-image" alt=""></div><div class="viewer-links"><a id="viewer-original" target="_blank" rel="noopener">Open original SVG ↗</a></div></dialog></body></html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Quantifying terrain change with InSAR · Jane Wang</title>
+    <meta name="description"
+        content="A demonstration of satellite data acquisition, wrangling and glacier line-of-sight time-series visualization, with supplementary Randolph Glacier Inventory outlines.">
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../site.js" defer></script>
+</head>
+
+<body><a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="wrap nav"><a class="brand" href="../index.html">Jane Yuexian Wang<small>Geospatial analysis &amp;
+                    visual communication</small></a>
+            <nav aria-label="Main navigation"><a href="../index.html#work">Selected work</a><a
+                    href="../index.html#approach">Approach</a><a href="#contact">Contact</a></nav>
+        </div>
+    </header>
+    <main id="main" class="wrap"><a class="breadcrumb" href="../index.html#work">← Selected projects</a>
+        <section class="case-head">
+            <div>
+                <p class="eyebrow">Radar remote sensing / Workflow development</p>
+                <h1>Quantifying terrain<br>change with InSAR.</h1>
+            </div>
+            <p class="intro">This demo follows a satellite-data pipeline from acquisition through data wrangling to line-of-sight displacement time-series visualization. A supplementary glacier-outline extract from the open-source Randolph Glacier Inventory provides spatial context for interpreting the observations.</p>
+        </section>
+        <dl class="facts">
+            <div>
+                <dt>My contribution</dt>
+                <dd>Workflow demonstration and visual interpretation</dd>
+            </div>
+            <div>
+                <dt>Processing direction</dt>
+                <dd>Interferograms → Displacement time series → Interpretation</dd>
+            </div>
+            <div>
+                <dt>Finding shown</dt>
+                <dd>Ascending observation geometry · 2021–2022</dd>
+            </div>
+        </dl>
+        <section class="story">
+            <h2>The question</h2>
+            <div>
+                <p>What can a short radar observation record reveal about movement within a glacier outline? The study
+                    connects glacier inventories with an interferometric time-series workflow, then examines how the
+                    displayed line-of-sight signal varies through the year.</p>
+            </div>
+        </section>
+        <figure class="plate climate-figure">
+            <div class="plate-art"><img src="../assets/glacier-los-timeseries.svg" alt="Exploratory finding / 2021–2022"
+                    loading="lazy"></div>
+            <figcaption><span class="label">Exploratory finding / 2021–2022</span>
+                <p>The supplied ascending LOS series rises into winter, drops through spring, then partly recovers in
+                    summer before declining again toward autumn. This describes the plotted pattern; it does not
+                    establish a seasonal mechanism. The figure labels displacement in millimetres but has no readable
+                    numerical y-axis ticks, so no displacement magnitude or rate is reported here.</p><button
+                    class="figure-open" data-figure="../assets/glacier-los-timeseries.svg"
+                    data-title="Exploratory finding / 2021–2022">Enlarge figure ↗</button>
+            </figcaption>
+        </figure>
+        <section class="story">
+            <h2>The<br>workflow</h2>
+            <div>
+                <div class="steps">
+                    <div class="step"><span class="index">01 / Acquire</span>
+                        <h3>Assemble radar inputs</h3>
+                        <p>Identify the glacier and observation period, then obtain interferogram products through the
+                            Alaska Satellite Facility.</p>
+                    </div>
+                    <div class="step"><span class="index">02 / Process</span>
+                        <h3>Build a time series</h3>
+                        <p>Prepare the interferogram stack and supporting geometry for MintPy. Its time-series workflow
+                            links interferometric observations to displacement along the radar line of sight.</p>
+                    </div>
+                    <div class="step"><span class="index">03 / Interpret</span>
+                        <h3>Survey glacier movement</h3>
+                        <p>Relate the time series to glacier outlines and inspect temporal variation. Reference choices,
+                            coherence, unwrapping and observation geometry remain essential to interpreting that signal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <figure class="plate climate-figure">
+            <div class="plate-art"><img src="../assets/glacier-insar-preview.svg"
+                    alt="Earlier dossier / Context graphic" loading="lazy"></div>
+            <figcaption><span class="label">Earlier dossier / Context graphic</span>
+                <p>The earlier dossier graphic is retained as the project preview. Its source filename identifies a
+                    borrowed time series, and its longer date range differs from the 2021–2022 finding above. It is
+                    contextual material, not evidence that the workflow produced this longer record.</p><button
+                    class="figure-open" data-figure="../assets/glacier-insar-preview.svg"
+                    data-title="Earlier dossier / Context graphic">Enlarge figure ↗</button>
+            </figcaption>
+        </figure>
+        <section class="story">
+            <h2>Data sources<br>and references</h2>
+            <div>
+                <ol class="references">
+                    <li><a href="https://doi.org/10.1016/j.rse.2021.112862" target="_blank" rel="noopener">Bevington, A.
+                            R. &amp; Menounos, B. (2022). Accelerated change in the glaciated environments of western
+                            Canada revealed through trend analysis of optical satellite imagery.</a>
+                        <p>Remote Sensing of Environment, 270, 112862. Optical glacier-change context; distinct from the
+                            radar LOS measurements shown here.</p><a href="https://zenodo.org/records/5900363"
+                            target="_blank" rel="noopener">Associated glacier-outline dataset ↗</a>
+                    </li>
+                    <li><a href="https://www.glims.org/rgi_user_guide/welcome.html" target="_blank"
+                            rel="noopener">Randolph Glacier Inventory (RGI)</a>
+                        <p>Global glacier-outline data for inventory context. The version used in this exploration is
+                            not recorded in the retained graphics.</p>
+                    </li>
+                    <li><a href="https://asf.alaska.edu/" target="_blank" rel="noopener">Alaska Satellite Facility</a>
+                        <p>Radar-data and interferogram acquisition within the workflow.</p>
+                    </li>
+                    <li><a href="https://mintpy.readthedocs.io/en/latest/" target="_blank" rel="noopener">MintPy · InSAR
+                            time-series analysis</a>
+                        <p>Software for deriving line-of-sight displacement time series from interferogram stacks.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+        <aside class="source-note">
+            <h3>Reading the result</h3>
+            <p>Ascending LOS displacement is a projection along the satellite’s viewing direction, not the full
+                glacier-flow vector. The shaded band and companion traces are retained as supplied; their statistical
+                definitions are not documented in the graphic. They are not labelled as a confidence interval here.</p>
+        </aside>
+        <p class="reference-intro">Workflow context: <a href="https://mintpy.readthedocs.io/en/latest/" target="_blank" rel="noopener">MintPy documentation</a>. These stages describe the approach, not a claim that every processing or correction step has been validated.</p>
+        <a class="next-project" href="../mass-balance/index.html"><span class="label">Next
+                project</span><span>Glacier mass balance ↗</span></a>
+    </main>
+    <footer class="wrap" id="contact">
+        <div class="contact">
+            <div>
+                <p class="eyebrow">Jane Yuexian Wang · Vancouver, BC</p>
+                <h2>Let’s make the data legible.</h2>
+                <p>Geospatial analysis, cartography, and editorial visualisation.</p>
+            </div>
+            <div><a href="mailto:janewyx11@gmail.com">janewyx11@gmail.com</a><br><a class="text-link"
+                    href="https://www.linkedin.com/in/jane-yuexian-wang-b06ab8143/" target="_blank" rel="noopener">View
+                    LinkedIn profile ↗</a></div>
+        </div>
+        <div class="copyright"><span>© 2026 Jane Yuexian Wang</span><span>Selected works / 2026</span></div>
+    </footer>
+    <dialog id="figure-viewer" aria-labelledby="viewer-title">
+        <div class="viewer-bar">
+            <p id="viewer-title">Figure</p><button type="button" id="viewer-close">Close ×</button>
+        </div>
+        <div class="viewer-body"><img id="viewer-image" alt=""></div>
+        <div class="viewer-links"><a id="viewer-original" target="_blank" rel="noopener">Open original SVG ↗</a></div>
+    </dialog>
+</body>
+
+</html>

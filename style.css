@@ -42,3 +42,22 @@ body{font-size:16px;line-height:1.55;font-synthesis:none}h1,h2,h3,h4,strong,b,th
   .climate-figure figcaption>p{grid-column:2}
   .climate-figure figcaption>.figure-open{grid-column:3;grid-row:1}
 }
+
+/* Crop only the stack's surrounding whitespace, keeping its source geometry intact. */
+.mass-sequence .glacier-stack-crop{display:block;width:100%;height:350px}
+@media(max-width:1000px){.mass-sequence .glacier-stack-crop{height:260px}}
+@media(max-width:760px){.mass-sequence .glacier-stack-crop{height:auto;max-height:440px;aspect-ratio:335 / 385}}
+
+/* Profile: two type sizes and a consistent spacing rhythm. */
+.profile{font-size:16px;line-height:1.6}
+.profile h1{font-size:40px;line-height:1.1;letter-spacing:-.04em;margin:0 0 24px}
+.profile p,.profile .label,.profile .profile-intro,.profile-background p:not(.label),.profile-contact,.profile-contact a{font-size:inherit;line-height:inherit}
+.profile .label{margin-bottom:16px}
+.profile-intro{margin-bottom:0}
+.profile-background{margin-top:32px}
+.profile-background .label{margin-bottom:12px}
+.profile-background p:not(.label){margin-bottom:0}
+.profile-tools{margin-top:16px}
+.profile-contact{margin-top:32px}
+.profile-contact p{margin-bottom:4px}
+.profile-contact a{padding:4px 0}
