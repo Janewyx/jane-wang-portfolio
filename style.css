@@ -61,3 +61,10 @@ body{font-size:16px;line-height:1.55;font-synthesis:none}h1,h2,h3,h4,strong,b,th
 .profile-contact{margin-top:32px}
 .profile-contact p{margin-bottom:4px}
 .profile-contact a{padding:4px 0}
+
+/* Keep the same navigation available on home and project pages. */
+@media(max-width:760px){
+  .site-header .nav{flex-wrap:wrap}
+  .site-header nav{gap:12px;font-size:12px}
+  .site-header nav a:first-child{display:inline}
+}
