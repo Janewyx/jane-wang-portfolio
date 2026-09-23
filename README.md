@@ -1,20 +1,16 @@
 # Jane Wang — portfolio
 
-A static portfolio with five projects, in order: Reading a short Arctic summer; Greenland climate; Quantifying terrain change with InSAR; Glacier mass balance; Mapping community exposure. No installation or build is required. Captions, references, legends and linked PDF/CSV/methods files are retained.
+A static portfolio with five projects, in order: Reading a short Arctic summer; Mapping community exposure; Greenland climate; Quantifying terrain change with InSAR; Glacier mass balance. No installation or build is required. Captions, references, legends and linked PDF/CSV/methods files are retained.
 
-## Publish using GitHub's website
+## Source and publishing workflow
 
-1. Sign in to GitHub as `Janewyx` and create a new, empty **public** repository named `jane-wang-portfolio`. Leave the initial README, .gitignore and licence options unselected; this folder supplies its own README and .gitignore. If using an existing repository, first inspect its files, README, branches, Settings → Pages, and any live site or CNAME. Do not replace existing content or change a live site's publishing source without reviewing it.
-2. Upload the **contents** of the prepared `publishing` folder to the repository root, not the enclosing folder or the working project's `dist`, scripts, source projects. On an empty repository choose **uploading an existing file**; otherwise choose **Add file → Upload files**. Drag the files and folders together to preserve their structure. Commit the upload to `main`.
-3. Include `.nojekyll` and `.gitignore`. In Finder, press Command–Shift–Period to show hidden files. If the browser omits a dotfile, use **Add file → Create new file**, enter its exact name and copy its contents. For `.nojekyll`, a blank file or one newline is sufficient. Ensure `index.html`, `style.css`, `site.js`, `assets`, and all five project folders are at the repository root.
-4. Open **Settings → Pages → Build and deployment**. Select **Deploy from a branch**, then **main** and **/(root)**, and save. Wait for the Pages deployment in **Actions** to succeed, then use the site link shown in Settings → Pages.
-5. For a project repository the URL is `https://janewyx.github.io/jane-wang-portfolio/`. A repository named exactly `USERNAME.github.io` serves at `https://USERNAME.github.io/`; check for an existing personal site before choosing that name.
+This repository root is the maintained website source and the GitHub Pages publishing directory. Edit `index.html`, the project HTML files, `style.css`, `site.js` and `assets/` directly. There is no generated `publishing/` directory, build step or scientific plotting step required for copy changes. Do not create a second website copy.
 
-GitHub browser uploads do not use `.gitignore` as a filter. Upload only the prepared files. Ignore rules also do not remove files already present in a repository. All supplied files are below GitHub's 25 MiB per-file browser upload limit; do not upload a ZIP in place of the website files.
+GitHub Pages deploys `main` from `/(root)`; `.nojekyll` keeps the site static. Review and commit changes locally, then push to `main` only when ready to publish. Check the Pages deployment in Actions before reviewing the live site. Browser edits on GitHub can also be committed to `main`. Keep relative links and the required asset files together.
 
-## Update and republish
+## DCRRA processing and presentation
 
-Edit this publishing copy's HTML, CSS, JavaScript or assets, retaining the relative paths. Use GitHub's pencil editor for small text changes, or **Add file → Upload files** for changed files. Upload nested files into their matching repository folder, or drag the corresponding top-level folder from the repository root. Review the destination paths and commit. Pages republishes automatically; confirm success in Actions and refresh the live site. A file removed locally remains online until deleted through GitHub's UI. Review any removals and keep the referenced downloads.
+The [published ACEC-BC project overview](https://acecbcawards.com/geospatial-analysis-provincial-disaster-and-climate-risk-and-resilience-assessment-dcrra/) specifies 1 km × 1 km vector processing grids. The portfolio's separate 8 km equal-area circle grid is a visual presentation. The four map assets remain independent visual reconstructions; the public project overview does not validate their displayed values.
 
 ## Search visibility
 
