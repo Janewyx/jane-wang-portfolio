@@ -1,4 +1,4 @@
-# Jane Wang — portfolio
+# Jane Wang — Portfolio
 
 A static portfolio with five projects, in order: Reading a short Arctic summer; Mapping community exposure; Greenland climate; Quantifying terrain change with InSAR; Glacier mass balance. No installation or build is required. Captions, references, legends and linked PDF/CSV/methods files are retained.
 
@@ -14,7 +14,6 @@ The [published ACEC-BC project overview](https://acecbcawards.com/geospatial-ana
 
 ## Search visibility
 
-
-The existing `noindex` tags are retained. The site is publicly accessible but asks search engines not to index it; this is not access control. To make it searchable, remove `<meta name="robots" content="noindex">` from all six HTML files and republish.
+The pages allow search-engine indexing. After changes are published, search engines need to recrawl the site; inclusion and timing are not guaranteed.
 
 Sources: [GitHub Pages setup](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site), [browser uploads](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository).

@@ -2,6 +2,7 @@
 /*
 !/.gitignore
 !/.nojekyll
+!/favicon.ico
 !/README.md
 !/index.html
 !/style.css

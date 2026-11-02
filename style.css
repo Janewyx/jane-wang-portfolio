@@ -68,3 +68,11 @@ body{font-size:16px;line-height:1.55;font-synthesis:none}h1,h2,h3,h4,strong,b,th
   .site-header nav{gap:12px;font-size:12px}
   .site-header nav a:first-child{display:inline}
 }
+
+/* Match the profile separator and project navigation to the neutral palette. */
+.profile-divider{border:0;border-top:1px solid var(--line);margin:0 0 36px;width:100%}
+.breadcrumb,.breadcrumb:visited,.next-project,.next-project:visited{color:var(--ink);text-decoration:none}
+a:hover,.breadcrumb:hover,.breadcrumb:focus-visible,.next-project:hover,.next-project:focus-visible{color:#176f69}
+.breadcrumb:hover,.breadcrumb:focus-visible,
+.next-project:hover,.next-project:focus-visible,
+.next-project:hover span,.next-project:focus-visible span{text-decoration:none}
