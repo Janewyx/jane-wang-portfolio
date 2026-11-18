@@ -19,6 +19,8 @@
 !/mass-balance/**
 !/hazards/
 !/hazards/**
+!/rainfall/
+!/rainfall/**
 
 .DS_Store
 ._*

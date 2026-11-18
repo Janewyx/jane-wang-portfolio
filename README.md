@@ -1,6 +1,6 @@
 # Jane Wang — Portfolio
 
-A static portfolio with five projects, in order: Reading a short Arctic summer; Mapping community exposure; Greenland climate; Quantifying terrain change with InSAR; Glacier mass balance. No installation or build is required. Captions, references, legends and linked PDF/CSV/methods files are retained.
+A static portfolio with six projects, in order: Reading a short Arctic summer; Mapping community exposure; Greenland climate; Quantifying terrain change with InSAR; Glacier mass balance; Reading coastal rainfall. No installation or build is required. Captions, references, legends and linked PDF/CSV/methods files are retained.
 
 ## Source and publishing workflow
 
